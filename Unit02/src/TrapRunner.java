@@ -26,4 +26,5 @@ EXPECTED OUTPUT
 34.0
 47.5
 
+returns expected output :)
 */
