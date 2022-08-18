@@ -69,5 +69,31 @@ public class StarsAndStripes
 	   System.out.println("|                 |");
 	   System.out.println("|                 |");
 	   System.out.println("-------------------");
-   }   
+   }
+
+public void realstarsandstripes() {
+	String flagtp="_____________________________________";
+	String toprow="|* * * * * *|########################|";
+	String tworow="| * * * * * |                        |";
+	String botrow="|*_*_*_*_*_*|########################|";
+	String whiter="|                                    |";
+	String redrow="|####################################|";
+	
+	System.out.println(flagtp);
+	System.out.println(toprow);
+	System.out.println(tworow);
+	System.out.println(toprow);
+	System.out.println(tworow);
+	System.out.println(toprow);
+	System.out.println(tworow);
+	System.out.println(botrow);
+	
+	System.out.println(whiter);
+	System.out.println(redrow);
+	System.out.println(whiter);
+	System.out.println(redrow);
+	System.out.println(whiter);
+	System.out.println(redrow);
+	
+}   
 }

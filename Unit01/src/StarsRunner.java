@@ -35,6 +35,8 @@ public class StarsRunner
 		}
 	}
       
+    //my extra credit work, prints the american flag
+    starprinter.realstarsandstripes();
       
    }
    
