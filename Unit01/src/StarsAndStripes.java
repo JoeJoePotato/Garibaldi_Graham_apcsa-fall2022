@@ -4,7 +4,7 @@
 
 //Name - Graham Garibaldi
 //Date - 8/18/22
-//Class - APCSA period 1, fall 2022
+//Class - APCSA period 2, fall 2022
 
 
 import static java.lang.System.*;
