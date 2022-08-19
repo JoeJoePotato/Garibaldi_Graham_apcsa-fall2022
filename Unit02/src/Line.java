@@ -9,9 +9,13 @@ public class Line
 {
 	public static double getSlope( int x1, int y1, int x2, int y2 )
 	{
-		int rise=y2-y1;
+		
+		int rise=(y2-y1)*100;
 		int run=x2-x1;
-		double d= Math.round((rise/run) * 100.0) / 100.0;
+		long i=Math.floorDiv(rise,run);
+
+		double d=i;
+		d=d/100;
 		
 		return d;
 	}
