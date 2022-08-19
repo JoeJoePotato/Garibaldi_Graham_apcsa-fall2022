@@ -1,3 +1,6 @@
+//Name - Graham Garibaldi
+//Date - 8/19/22
+//Class - APCSA period 2, 2022
 
 
 import java.util.Scanner; 
