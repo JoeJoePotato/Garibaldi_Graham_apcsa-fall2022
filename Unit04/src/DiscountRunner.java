@@ -1,10 +1,8 @@
-//(c) A+ Computer Science
-//www.apluscompsci.com
+//Name - Graham Garibaldi
+//Date - 8/19/22
+//Class - APCSA period 2, 2022
 
-//Name - 
-//Date -
-//Class -
-//Lab  -
+
 
 import static java.lang.System.*;
 import java.util.Scanner;
