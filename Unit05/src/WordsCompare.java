@@ -28,13 +28,20 @@ public class WordsCompare
 
 	public boolean compare()
 	{
-		char firstOne=wordOne.charAt(0);
-		char firstTwo=wordTwo.charAt(0);
-		if(firstOne<firstTwo) {
+		
+		for (int i = 1; i < wordOne.length() && i< wordTwo.length(); i++) {
+			char One=wordOne.charAt(i);
+			char Two=wordTwo.charAt(i);	
+		
+		if(One<Two) {
 			return true;
 		}
-		if(firstOne>firstTwo) {
+		if(One>Two) {
 			return false;
+		}
+		
+		
+		
 		}
 		if(wordOne.length()<wordTwo.length()) {
 			return true;
