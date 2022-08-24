@@ -10,6 +10,9 @@ import java.util.ArrayList;
  */
 public class CelebrityGame
 {
+	
+	String gameCelebrity;
+	
 	/**
 	 * A reference to a Celebrity or subclass instance.
 	 */
@@ -17,16 +20,18 @@ public class CelebrityGame
 	/**
 	 * The GUI frame for the Celebrity game.
 	 */
-
+CelebrityFrame gameWindow;
 	/**
 	 * The ArrayList of Celebrity values that make up the game
 	 */
-
+	ArrayList<Celebrity> celebGameList;
 	/**
 	 * Builds the game and starts the GUI
 	 */
 	public CelebrityGame()
 	{
+		celebGameList=new ArrayList<Celebrity>();
+		gameWindow=new CelebrityFrame(this);
 	}
 
 	/**
@@ -34,6 +39,8 @@ public class CelebrityGame
 	 */
 	public void prepareGame()
 	{
+		celebGameList=new ArrayList<Celebrity>();
+		gameWindow.replaceScreen("start");
 	}
 
 	/**
