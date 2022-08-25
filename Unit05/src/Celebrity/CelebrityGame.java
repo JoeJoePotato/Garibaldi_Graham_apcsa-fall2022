@@ -78,7 +78,7 @@ CelebrityFrame gameWindow;
 	 */
 	public void addCelebrity(String name, String guess, String type)
 	{
-		
+		celebGameList.add(new Celebrity(name, guess));
 	}
 
 	/**
@@ -88,6 +88,11 @@ CelebrityFrame gameWindow;
 	 */
 	public boolean validateCelebrity(String name)
 	{
+		name=name.trim();
+		if(name.length()>=4) {
+			return true;
+		}
+		
 		return false;
 	}
 
@@ -100,6 +105,9 @@ CelebrityFrame gameWindow;
 	 */
 	public boolean validateClue(String clue, String type)
 	{
+		if(clue.length()>=10) {
+			return true;
+		}
 		return false;
 	}
 
