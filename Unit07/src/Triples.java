@@ -65,13 +65,7 @@ public class Triples
 
 	public String toString()
 	{
-		String output="";
-
-
-
-
-
-
+		String output=cycle();
 		return output+"\n";
 	}
 }
