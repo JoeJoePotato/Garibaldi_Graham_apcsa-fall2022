@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Random;
 import java.util.ArrayList;
 
 /**
@@ -31,7 +32,7 @@ public class Deck {
 	 */
 	public Deck(String[] ranks, String[] suits, int[] values) {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
-	for (int i = 0; i < values.length; i++) {
+	for (int i = 0; i < values.length && i<suits.length && i<values.length; i++) {
 		cards.add(new Card(ranks[i], suits[i], values[i]));
 	}
 	size=cards.size();
@@ -66,6 +67,26 @@ public class Deck {
 	 */
 	public void shuffle() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
+		Random r=new Random();
+		boolean[] selected=new boolean[cards.size()];
+		while(notDone(selected)) {
+			int a=r.nextInt(cards.size());
+			int b=r.nextInt(cards.size());
+			Card temp=cards.get(a);
+			cards.set(a, cards.get(b));
+			cards.set(b, temp);
+			selected[a]=true;
+			selected[b]=true;
+		}
+	}
+	
+	private boolean notDone(boolean[] b) {
+		for(int i=0; i<b.length; i++) {
+			if(b[i]==false) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
