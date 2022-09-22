@@ -77,7 +77,9 @@ public class Card {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 1 *** */
 		if(rank.equals(otherCard.rank())) {
 			if(suit.equals(otherCard.suit())) {
+				if(pointValue==otherCard.pointValue()) {
 			return true;
+				}
 			}
 		}
 		
