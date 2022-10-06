@@ -14,30 +14,59 @@ public class ToyStore
 
 	public ToyStore()
 	{
-		
+		toyList=new ArrayList<Toy>();
 	}
 
 	public void loadToys( String toys )
 	{
-		
+		toyList=new ArrayList<Toy>();
+		toyList.add(new Toy(toys));
 	}
   
   	public Toy getThatToy( String nm )
   	{
+  		for(int i=0; i<toyList.size(); i++) {
+  			if(toyList.get(i).getName()==nm) {
+  				return toyList.get(i);
+  			}
+  		}
   		return null;
   	}
   
   	public String getMostFrequentToy()
   	{
-  		return "";
+  		for(int i=0; i<toyList.size(); i++) {
+  			for(int j=i; j<toyList.size(); j++) {
+  				if(toyList.get(i).getName().equals(toyList.get(j).getName())) {
+  					Toy temp=new Toy(toyList.get(i).getName());
+  				temp.setCount(toyList.get(i).getCount()+toyList.get(j).getCount());	
+  				toyList.set(i, temp);
+  				toyList.remove(j);
+  				}
+  			}
+  		}
+  		sortToysByCount();
+  		
+  		return toyList.get(toyList.size()-1).getName();
   	}  
   
   	public void sortToysByCount()
   	{
+  		for(int i=0; i<toyList.size(); i++) {
+  			for(int j=1; j<toyList.size(); j++) {
+  				if(toyList.get(j).getCount()<toyList.get(j-1).getCount()) {
+  					Toy temp=toyList.get(j);
+  					toyList.set(j, toyList.get(j-1));
+  					toyList.set(j-1, temp);
+  				}
+  			}
+  		}
   	}  
   	  
 	public String toString()
 	{
-	   return "";
+		getMostFrequentToy();
+		
+	   return ""+toyList;
 	}
 }

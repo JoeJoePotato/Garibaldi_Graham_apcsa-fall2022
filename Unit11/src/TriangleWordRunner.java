@@ -9,6 +9,11 @@ public class TriangleWordRunner
 {
 	public static void main( String args[] )
 	{
+		boolean proceed=true;
+		while(proceed==true) {
+			
+			
+		}
 		
 	}
 }
