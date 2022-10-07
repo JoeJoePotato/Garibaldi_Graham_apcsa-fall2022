@@ -17,7 +17,12 @@ public class TriangleWord
 			for(int j=0; j<i; j++) {
 				assembly+=word.charAt(j);
 			}
+		
+			for(int k=1; k<i; k++) {
+				System.out.print(assembly);
+			}
 			System.out.println(assembly);
+			
 		}
 	}
 }
