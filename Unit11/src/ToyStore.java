@@ -20,7 +20,17 @@ public class ToyStore
 	public void loadToys( String toys )
 	{
 		toyList=new ArrayList<Toy>();
-		toyList.add(new Toy(toys));
+		String s=toys;
+		while(s.length()>0){
+			for(int i=0; i<s.length; i++){
+				if(s.charAt(i)==' '){
+					toyList.add(new Toy(s.substring(0, i));
+					s=s.substring(i+1);
+
+				}
+			}
+		}
+
 	}
   
   	public Toy getThatToy( String nm )
