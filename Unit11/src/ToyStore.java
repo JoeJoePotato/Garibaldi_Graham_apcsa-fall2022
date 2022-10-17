@@ -21,6 +21,7 @@ public class ToyStore
 	{
 		toyList=new ArrayList<Toy>();
 		String s=toys;
+<<<<<<< HEAD
 		int i=0;
 		System.out.println("here");
 		while(s.length()!=0) {
@@ -33,6 +34,18 @@ public class ToyStore
 			
 		}
 		System.out.println("there");
+=======
+		while(s.length()>0){
+			for(int i=0; i<s.length; i++){
+				if(s.charAt(i)==' '){
+					toyList.add(new Toy(s.substring(0, i));
+					s=s.substring(i+1);
+
+				}
+			}
+		}
+
+>>>>>>> 7a581e0bb20b9589c871fb25958a23dc92caedfa
 	}
   
   	public Toy getThatToy( String nm )
