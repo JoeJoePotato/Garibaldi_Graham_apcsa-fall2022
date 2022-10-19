@@ -15,7 +15,7 @@ public class WordRunner
 	{
 		Scanner file = new Scanner(new File("src/words.dat"));
 
-		int size = file.nextInt();
+		int size = file.nextInt()+1;
 		Word[] words=new Word[size];
 	
 		int j=0;
