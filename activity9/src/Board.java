@@ -36,6 +36,7 @@ public abstract class Board {
 		cards = new Card[size];
 		deck = new Deck(ranks, suits, pointValues);
 		deck.shuffle();
+		
 		if (I_AM_DEBUGGING) {
 			System.out.println(deck);
 			System.out.println("----------");
