@@ -24,7 +24,7 @@ public class NumberShifter
 	public static void shiftEm(int[] array)
 	{
 		
-		System.out.println(array+"");
+		print(array);
 		int sevendex=0;
 		for(int i=0; i<array.length; i++) {
 			if(array[i]==7) {
@@ -34,7 +34,17 @@ public class NumberShifter
 				sevendex++;
 			}
 		}
-	System.out.println(array.toString()+"");
+	print(array);
+	}
+	
+	private static void print(int[] arr) {
+		String printout="{";
+		for(int i : arr) {
+			printout+=(" "+i+" ");
+		}
+		
+		printout+="}";
+		System.out.println(printout);
 	}
 	
 }

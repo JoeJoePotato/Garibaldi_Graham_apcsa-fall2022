@@ -20,7 +20,24 @@ public class NumberSorter
 
 	public static int[] getSortedDigitArray(int number)
 	{
-		int[] sorted = null;
+		String snum=""+number;
+		int[] sorted = new int[snum.length()];
+		for(int i=0; i<sorted.length; i++) {
+			sorted[i]=Integer.parseInt(snum.substring(i, i+1));
+		}
+		
+		for(int j=0; j<(sorted.length-1); j++) {
+			for(int k=j+1; k<sorted.length; k++) {
+				if(sorted[k]<sorted[j]) {
+					int temp=sorted[k];
+					sorted[k]=sorted[j];
+					sorted[j]=temp;
+				}
+				
+			}
+		}
+		
 		return sorted;
 	}
+	
 }
