@@ -34,11 +34,26 @@ public class PictureTester
     caterpillar.explore();
   }
   
+  public static void testFixUnderwater() {
+	  Picture fish = new Picture("water.jpg");
+	  fish.explore();
+
+	  fish.FishEnhance();
+	  fish.explore();
+  }
+  
   public static void testKeepOnlyRed() {
 	  Picture beach = new Picture("beach.jpg");
 	  beach.explore();
 	  beach.zeroBlue();
 	  beach.zeroGreen();
+	  beach.explore();
+  }
+  
+  public static void testNegate() {
+	  Picture beach = new Picture("beach.jpg");
+	  beach.explore();
+	  beach.negate();;
 	  beach.explore();
   }
   
@@ -64,6 +79,14 @@ public class PictureTester
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
+  }
+  
+  public static void testMirrorArms()
+  {
+    Picture arms = new Picture("snowman.jpg");
+    arms.explore();
+    arms.mirrorArms();
+    arms.explore();
   }
   
   /** Method to test the collage method */
@@ -93,15 +116,15 @@ public class PictureTester
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate(); *
-    testGrayscale();
+    //testNegate();
+    //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();

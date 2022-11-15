@@ -632,7 +632,7 @@ public class SimplePicture implements DigitalPicture
    if (fileLoc == null)
    {
      fileName = FileChooser.getMediaPath(fileName);
-     file = new File(fileName);
+     file = new File("src/"+fileName);
      fileLoc = file.getParentFile(); 
    }
    

@@ -136,6 +136,24 @@ public class Picture extends SimplePicture
 	    }
   }
   
+  public void FishEnhance() {
+	  Pixel[][] pixels = this.getPixels2D();
+	  for (Pixel[] rowArray : pixels)
+	    {
+	      for (Pixel pixelObj : rowArray)
+	      {
+	    	if(pixelObj.getBlue()<160 || pixelObj.getRed()>28) {
+	    		int a=(int) pixelObj.getAverage();
+		        pixelObj.setGreen(a);
+		        pixelObj.setBlue(a);
+		        pixelObj.setRed(a);
+	    	}
+	      }
+	    }
+  }
+  
+  
+  
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */
@@ -176,6 +194,29 @@ public class Picture extends SimplePicture
         rightPixel = pixels[row]                       
                          [mirrorPoint - col + mirrorPoint];
         rightPixel.setColor(leftPixel.getColor());
+      }
+    }
+  }
+  
+  public void mirrorArms()
+  {
+    int mirrorPoint = 190;
+    Pixel topPixel = null;
+    Pixel bottomPixel = null;
+    int count = 0;
+    Pixel[][] pixels = this.getPixels2D();
+    
+    // loop through the rows
+    for (int row = 157; row < mirrorPoint; row++)
+    {
+      // loop from 13 to just before the mirror point
+      for (int col = 113; col < 300 ; col++)
+      {
+        
+        topPixel = pixels[row][col];      
+        bottomPixel = pixels[mirrorPoint - row + mirrorPoint]                       
+                         [col];
+        bottomPixel.setColor(topPixel.getColor());
       }
     }
   }
@@ -266,5 +307,20 @@ public class Picture extends SimplePicture
     beach.zeroBlue();
     beach.explore();
   }
+
+public void negate() {
+	// TODO Auto-generated method stub
+	Pixel[][] pixels = this.getPixels2D();
+	  for (Pixel[] rowArray : pixels)
+	    {
+	      for (Pixel pixelObj : rowArray)
+	      {
+	    	
+	        pixelObj.setGreen(255-pixelObj.getGreen());
+	        pixelObj.setBlue(255-pixelObj.getBlue());
+	        pixelObj.setRed(255-pixelObj.getRed());
+	      }
+	    }
+}
   
 } // this } is the end of class Picture, put all new methods before this
