@@ -89,6 +89,22 @@ public class PictureTester
     arms.explore();
   }
   
+  public static void testMirrorGull()
+  {
+    Picture arms = new Picture("seagull.jpg");
+    arms.explore();
+    arms.mirrorGull();
+    arms.explore();
+  }
+  
+  public static void testMirrorDiagonal()
+  {
+    Picture diag = new Picture("beach.jpg");
+    diag.explore();
+    diag.mirrorDiag();
+    diag.explore();
+  }
+  
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -101,7 +117,16 @@ public class PictureTester
   public static void testEdgeDetection()
   {
     Picture swan = new Picture("swan.jpg");
+    swan.explore();
     swan.edgeDetection(10);
+    swan.explore();
+  }
+  
+  public static void testEdgeDetection2()
+  {
+    Picture swan = new Picture("swan.jpg");
+    swan.explore();
+    swan.edgeDetection2();
     swan.explore();
   }
   
@@ -124,15 +149,49 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    testCollage();
+    //testCollage();
     //testCopy();
     //testEdgeDetection();
-    //testEdgeDetection2();
+	testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
+	 
+	  /*
+
+	  */
   }
+
+private static void testChromakey() {
+	// TODO Auto-generated method stub
+	 Picture canvas = new Picture("blue-mark.jpg");
+	 Picture newbackground = new Picture("moon-surface.jpg");
+	 canvas.explore();
+	
+	 canvas.Chromakey(newbackground);
+	 canvas.explore();
+}
+
+private static void testCopy() {
+	// TODO Auto-generated method stub
+	 Picture canvas = new Picture("640x480.jpg");
+	    canvas.createPartialCollage();
+	    canvas.explore();
+}
+
+private static void testEncodeAndDecode() {
+	  Picture beach = new Picture("640x480.jpg");
+	  Picture apple=new Picture("temple.jpg");
+	  
+	  beach.explore();
+	  beach.encode(apple);
+	  beach.explore();
+	  
+	  Picture decoded=beach.decode();
+	  decoded.explore();
+	
+}
 }
