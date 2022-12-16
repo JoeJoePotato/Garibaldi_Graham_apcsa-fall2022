@@ -152,17 +152,15 @@ public class PictureTester
     //testCollage();
     //testCopy();
     //testEdgeDetection();
-	testEdgeDetection2();
+	//testEdgeDetection2();
     //testChromakey();
-    //testEncodeAndDecode();
+    testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
 	 
-	  /*
-
-	  */
+	
   }
 
 private static void testChromakey() {
@@ -184,7 +182,7 @@ private static void testCopy() {
 
 private static void testEncodeAndDecode() {
 	  Picture beach = new Picture("640x480.jpg");
-	  Picture apple=new Picture("temple.jpg");
+	  Picture apple=new Picture("msg.jpg");
 	  
 	  beach.explore();
 	  beach.encode(apple);
